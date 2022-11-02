@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+.font {
+    font-family: 'Inter', sans-serif;
+}
+
+.tools_color {
+    color: var(--tools-color);
+}
+
+.tools>.tool {
+    padding-left: 0.75rem;
+}
+
+:root {
+    --light-boolzapp: #EAEAEA;
+    --tools-color: #B1B1B1;
+    --boolzapp-name: 16px;
+}
+
+/* #region debug */
+.debug .container {
+    background-color: blue;
+}
+
+.debug .col-4 {
+    background-color: red;
+}
+
+.debug .col-8 {
+    background-color: green;
+}
+
+/* #endregion debug */
+
+header {
+    height: 20vh;
+    background-color: #009688;
+}
+
+main {
+    height: 80vh;
+    background-color: #DBDBD3;
+}
+
+
+
+main>.container {
+    height: 90vh;
+    position: absolute;
+    top: 5vh;
+    left: 50%;
+    translate: -50%;
+}
+
+main .row {
+    height: 100%;
+
+}
+
+.chat_top {
+    height: 70px;
+    background-color: var(--light-boolzapp);
+}
+
+
+
+.chat_user_avatar img {
+    width: 55px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
