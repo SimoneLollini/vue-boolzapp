@@ -165,6 +165,7 @@ const contacts = [
 ]
 
 
+
 const { createApp } = Vue
 
 createApp({
@@ -176,7 +177,7 @@ createApp({
     },
     methods: {
         setActiveChat(index) {
-            console.log(index);
+            // console.log(index);
             this.activeChat = index
         }
     }

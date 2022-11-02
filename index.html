@@ -115,11 +115,8 @@
 
                     <div class="chat_main d-flex flex-column justify-content-between">
                         <div class="message_wrapper px-5 pt-5">
-                            <div class="message send">
-
-                            </div>
-                            <div class="message received">
-
+                            <div class="message" v-for="(contact, indexChat) in contacts">
+                                {{contacts[activeChat].messages[indexChat]}}
                             </div>
                         </div>
 

@@ -81,14 +81,8 @@ main>.container {
     translate: -50%;
 }
 
-main .row {
-    height: 100%;
-
-}
-
 .contacts {
     border-right: 1px solid var(--boolzapp-border);
-    height: 100%;
 }
 
 input,
@@ -101,7 +95,7 @@ button {
 }
 
 .contacts_list {
-    height: calc(100% - 184px);
+    height: calc(90vh - 184px);
     overflow-y: auto;
 }
 
@@ -146,12 +140,17 @@ button {
 }
 
 .chat_main {
-    height: calc(100% - 70px);
+    height: calc(90vh - 70px);
     background-image: url(../img/mine.jpg);
 }
 
 .chat_imputs {
     background-color: var(--input-chat-bg);
+}
+
+.message_wrapper {
+    overflow-y: auto;
+
 }
 
 .message {
