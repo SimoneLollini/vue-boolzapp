@@ -21,10 +21,13 @@ img {
 }
 
 :root {
+    --light: white;
     --light-boolzapp: #EAEAEA;
+    --boolzapp-border: #D6D6D6;
     --tools-color: #B1B1B1;
-    ---boolzapp-blue: #8EDAFC;
+    --boolzapp-blue: #8EDAFC;
     --boolzapp-name: 16px;
+    --search-borders: #F5F5F5;
 }
 
 /* #region debug */
@@ -50,7 +53,7 @@ img.avatar {
 }
 
 .text_blue {
-    color: var(---boolzapp-blue);
+    color: var(--boolzapp-blue);
 }
 
 /* #endregion utility */
@@ -81,6 +84,34 @@ main .row {
 
 }
 
+.contacts {
+    border-right: 1px solid var(--boolzapp-border);
+    height: 100%;
+}
+
+input,
+button {
+    border: 1px solid var(--search-borders);
+}
+
+.contacts .search {
+    background-color: #FAFAFA;
+}
+
+.contacts_list {
+    height: calc(100% - 184px);
+    overflow-y: auto;
+}
+
+.contact {
+    height: 80px;
+    background-color: var(--light);
+}
+
+.contact img {
+    width: 60px;
+}
+
 .chat_top,
 .user_contact {
     height: 70px;
@@ -96,7 +127,7 @@ main .row {
 
 
 .user_notification {
-    background-color: var(---boolzapp-blue);
+    background-color: var(--boolzapp-blue);
     height: 80px;
     align-items: center;
 }

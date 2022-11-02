@@ -1,4 +1,4 @@
-contacts: [
+const contacts = [
     {
         name: 'Michele',
         avatar: '_1',
@@ -168,7 +168,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-
+            contacts
         }
     }
 }).mount('#app')

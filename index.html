@@ -38,9 +38,9 @@
 
 
                         <div class="user_tools tools">
-                            <a href="#" class="tool tools_color"><i class="fa-solid fa-ellipsis-vertical"></i></a>
-                            <a href="#" class="tool tools_color"><i class="fa-solid fa-message"></i></a>
-                            <a href="#" class="tool tools_color"><i class="fa-solid fa-circle-notch"></i></a>
+                            <span class="tools_color tool"> <i class="fa-solid fa-ellipsis-vertical"></i></span>
+                            <span class="tools_color tool"> <i class="fa-solid fa-message"></i></span>
+                            <span class="tools_color tool"><i class="fa-solid fa-circle-notch"></i></span>
                         </div>
 
 
@@ -48,19 +48,39 @@
                     <!-- /.user_contact -->
                     <div class="user_notification d-flex">
                         <div class="bell mx-2">
-                            <a href="#" class="text_blue"><i class="fa-solid fa-bell-slash"></i></a>
+                            <i class="fa-solid fa-bell-slash text_blue"></i>
                         </div>
                         <div class="notification_text">
                             <div class="notification_status">
                                 Ricevi notifiche di nuovi messagi
                             </div>
                             <div class="">
-                                <a href="#" class="text-decoration-underline tool tools_color">Attiva notifiche
-                                    desktop</a>
+                                <span class="text-decoration-underline tool tools_color">Attiva notifiche
+                                    desktop</span>
                             </div>
                         </div>
                     </div>
                     <!-- /.user_notification -->
+
+                    <div class="search d-flex align-items-center justify-content-center p-1">
+                        <button class="flex-grow-1 bg-white"><i class="fa fa-search" aria-hidden="true"></i></button>
+                        <input type="text" class="flex-grow-1">
+                    </div>
+
+
+
+                    <div class="contacts_list">
+                        <div class="contact d-flex align-items-center px-2" v-for="(contact, index) in contacts">
+                            <img :src="'./assets /img/avatar'+contact.avatar+'.jpg'" class="avatar" alt="">
+
+
+                            <div class="text_wrapper mx-2">
+                                <div class="user_name">{{contact.name}}</div>
+                                <div class="last_message">Inserire l'ultimo messaggio qui</div>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
                 <!-- /.contacts -->
 
@@ -85,9 +105,9 @@
                         </div>
                         <!-- /.user -->
                         <div class="chat_tools tools">
-                            <a href="#" class="tool tools_color"><i class="fa fa-search" aria-hidden="true"></i></a>
-                            <a href="#" class="tool tools_color"><i class="fa-solid fa-ellipsis-vertical"></i></a>
-                            <a href="#" class="tool tools_color"><i class="fa-solid fa-paperclip"></i></a>
+                            <span class="tool tools_color"><i class="fa fa-search" aria-hidden="true"></i></span>
+                            <span class="tool tools_color"><i class="fa-solid fa-ellipsis-vertical"></i></span>
+                            <span class="tool tools_color"><i class="fa-solid fa-paperclip"></i></span>
                         </div>
                         <!-- /.tools -->
                     </div>
