@@ -19,7 +19,7 @@
 
 </head>
 
-<body class="font position-relative debug">
+<body class="font position-relative">
     <header id="site_header"></header>
     <!-- /#site_header -->
 
@@ -29,17 +29,49 @@
 
         <div id="app" class="container">
             <div class="row">
-                <div class="col-4 p-0 contacts"></div>
+                <div class="col-4 p-0 contacts">
+                    <div class="user_contact d-flex align-items-center justify-content-between px-2">
+                        <div class="user_info d-flex align-items-center">
+                            <img src="./assets /img/avatar_io.jpg" class="avatar" alt="">
+                            <div class="name px-2">Sofia</div>
+                        </div>
+
+
+                        <div class="user_tools tools">
+                            <a href="#" class="tool tools_color"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+                            <a href="#" class="tool tools_color"><i class="fa-solid fa-message"></i></a>
+                            <a href="#" class="tool tools_color"><i class="fa-solid fa-circle-notch"></i></a>
+                        </div>
+
+
+                    </div>
+                    <!-- /.user_contact -->
+                    <div class="user_notification d-flex">
+                        <div class="bell mx-2">
+                            <a href="#" class="text_blue"><i class="fa-solid fa-bell-slash"></i></a>
+                        </div>
+                        <div class="notification_text">
+                            <div class="notification_status">
+                                Ricevi notifiche di nuovi messagi
+                            </div>
+                            <div class="">
+                                <a href="#" class="text-decoration-underline tool tools_color">Attiva notifiche
+                                    desktop</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.user_notification -->
+                </div>
                 <!-- /.contacts -->
 
 
                 <div class="col-8 p-0 active_chat">
 
 
-                    <div class="chat_top d-flex align-items-center justify-content-between">
+                    <div class="chat_top d-flex align-items-center justify-content-between px-2">
                         <div class="user d-flex">
-                            <div class="chat_user_avatar mx-2 d-flex">
-                                <img src="./assets /img/avatar_1.jpg" alt="">
+                            <div class="chat_user_avatar d-flex">
+                                <img src="./assets /img/avatar_1.jpg" class="avatar" alt="">
                             </div>
                             <!-- /.chat_avatar -->
                             <div class="text_wrapper">
@@ -52,14 +84,10 @@
 
                         </div>
                         <!-- /.user -->
-                        <div class="tools mx-2">
+                        <div class="chat_tools tools">
                             <a href="#" class="tool tools_color"><i class="fa fa-search" aria-hidden="true"></i></a>
                             <a href="#" class="tool tools_color"><i class="fa-solid fa-ellipsis-vertical"></i></a>
                             <a href="#" class="tool tools_color"><i class="fa-solid fa-paperclip"></i></a>
-
-
-
-
                         </div>
                         <!-- /.tools -->
                     </div>
