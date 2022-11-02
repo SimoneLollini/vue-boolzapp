@@ -12,7 +12,7 @@ img {
     font-family: 'Inter', sans-serif;
 }
 
-.tools_color {
+.text_light_grey {
     color: var(--tools-color);
 }
 
@@ -28,6 +28,8 @@ img {
     --boolzapp-blue: #8EDAFC;
     --boolzapp-name: 16px;
     --search-borders: #F5F5F5;
+    --msg-received: #D5F9BA;
+    --input-chat-bg: #F3EEEA;
 }
 
 /* #region debug */
@@ -146,4 +148,24 @@ button {
 .chat_main {
     height: calc(100% - 70px);
     background-image: url(../img/mine.jpg);
+}
+
+.chat_imputs {
+    background-color: var(--input-chat-bg);
+}
+
+.message {
+    width: 40%;
+    padding: 0.4rem;
+    border-radius: 8px;
+}
+
+.message.send {
+    background-color: var(--msg-received);
+    margin-left: auto;
+}
+
+.message.received {
+    background-color: white;
+    margin-right: auto;
 }

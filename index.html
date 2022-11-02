@@ -38,9 +38,9 @@
 
 
                         <div class="user_tools tools">
-                            <span class="tools_color tool"> <i class="fa-solid fa-ellipsis-vertical"></i></span>
-                            <span class="tools_color tool"> <i class="fa-solid fa-message"></i></span>
-                            <span class="tools_color tool"><i class="fa-solid fa-circle-notch"></i></span>
+                            <span class="text_light_grey tool"> <i class="fa-solid fa-ellipsis-vertical"></i></span>
+                            <span class="text_light_grey tool"> <i class="fa-solid fa-message"></i></span>
+                            <span class="text_light_grey tool"><i class="fa-solid fa-circle-notch"></i></span>
                         </div>
 
 
@@ -55,7 +55,7 @@
                                 Ricevi notifiche di nuovi messagi
                             </div>
                             <div class="">
-                                <span class="text-decoration-underline tool tools_color">Attiva notifiche
+                                <span class="text-decoration-underline tool text_light_grey">Attiva notifiche
                                     desktop</span>
                             </div>
                         </div>
@@ -69,14 +69,13 @@
 
 
 
-                    <div class="contacts_list">
-                        <div class="contact d-flex align-items-center px-2" v-for="(contact, index) in contacts">
+                    <div class="contacts_list bg-white">
+                        <div class="contact d-flex align-items-center px-2" v-for="(contact, index) in contacts"
+                            @click="setActiveChat(index)">
                             <img :src="'./assets /img/avatar'+contact.avatar+'.jpg'" class="avatar" alt="">
-
-
                             <div class="text_wrapper mx-2">
                                 <div class="user_name">{{contact.name}}</div>
-                                <div class="last_message">Inserire l'ultimo messaggio qui</div>
+                                <div class="last_message text_light_grey">Inserire l'ultimo messaggio qui</div>
                             </div>
 
                         </div>
@@ -91,13 +90,14 @@
                     <div class="chat_top d-flex align-items-center justify-content-between px-2">
                         <div class="user d-flex">
                             <div class="chat_user_avatar d-flex">
-                                <img src="./assets /img/avatar_1.jpg" class="avatar" alt="">
+                                <img :src="'./assets /img/avatar'+contacts[activeChat].avatar+'.jpg'" class="avatar"
+                                    alt="">
                             </div>
                             <!-- /.chat_avatar -->
                             <div class="text_wrapper">
-                                <div class="name">Michele</div>
+                                <div class="name">{{contacts[activeChat].name}}</div>
 
-                                <div class="last_access">data ultimo accesso</div>
+                                <div class="last_access text_light_grey">Ultimo accesso oggi alle 12:00</div>
 
                             </div>
                             <!-- /.text_wrapper -->
@@ -105,16 +105,34 @@
                         </div>
                         <!-- /.user -->
                         <div class="chat_tools tools">
-                            <span class="tool tools_color"><i class="fa fa-search" aria-hidden="true"></i></span>
-                            <span class="tool tools_color"><i class="fa-solid fa-ellipsis-vertical"></i></span>
-                            <span class="tool tools_color"><i class="fa-solid fa-paperclip"></i></span>
+                            <span class="tool text_light_grey"><i class="fa fa-search" aria-hidden="true"></i></span>
+                            <span class="tool text_light_grey"><i class="fa-solid fa-ellipsis-vertical"></i></span>
+                            <span class="tool text_light_grey"><i class="fa-solid fa-paperclip"></i></span>
                         </div>
                         <!-- /.tools -->
                     </div>
                     <!-- /.chat_top -->
 
-                    <div class="chat_main"></div>
+                    <div class="chat_main d-flex flex-column justify-content-between">
+                        <div class="message_wrapper px-5 pt-5">
+                            <div class="message send">
+
+                            </div>
+                            <div class="message received">
+
+                            </div>
+                        </div>
+
+                        <div class="chat_imputs d-flex text_light_grey py-2 ">
+                            <div class="wrapper_emoticon px-5">
+                                <i class="fa-regular fa-face-smile"></i>
+                            </div>
+                            <input type="text" class="flex-grow-1">
+                            <div class="audio_input px-5"><i class="fa-solid fa-microphone"></i></div>
+                        </div>
+                    </div>
                     <!-- /.chat_main -->
+
                 </div>
                 <!-- /.active_chat -->
 

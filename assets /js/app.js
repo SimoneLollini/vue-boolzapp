@@ -159,7 +159,9 @@ const contacts = [
                 status: 'received'
             }
         ],
+
     }
+
 ]
 
 
@@ -168,7 +170,14 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            contacts
+            contacts,
+            activeChat: 0,
+        }
+    },
+    methods: {
+        setActiveChat(index) {
+            console.log(index);
+            this.activeChat = index
         }
     }
 }).mount('#app')
