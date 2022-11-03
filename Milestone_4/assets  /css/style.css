@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+.font {
+    font-family: 'Inter', sans-serif;
+}
+
+.text_light_grey {
+    color: var(--tools-color);
+}
+
+.tools>.tool {
+    padding-left: 0.75rem;
+}
+
+:root {
+    --light: white;
+    --light-boolzapp: #EAEAEA;
+    --boolzapp-border: #D6D6D6;
+    --tools-color: #B1B1B1;
+    --boolzapp-blue: #8EDAFC;
+    --boolzapp-name: 16px;
+    --search-borders: #F5F5F5;
+    --msg-received: #D5F9BA;
+    --input-chat-bg: #F3EEEA;
+}
+
+/* #region debug */
+.debug .container {
+    background-color: blue;
+}
+
+.debug .col-4 {
+    background-color: red;
+}
+
+.debug .col-8 {
+    background-color: green;
+}
+
+/* #endregion debug */
+
+
+/* #region utility */
+img.avatar {
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.text_blue {
+    color: var(--boolzapp-blue);
+}
+
+.contacts .active {
+    background-color: var(--light-boolzapp);
+}
+
+/* #endregion utility */
+
+
+header {
+    height: 20vh;
+    background-color: #009688;
+}
+
+main {
+    height: 80vh;
+    background-color: #DBDBD3;
+}
+
+
+
+main>.container {
+    height: 90vh;
+    position: absolute;
+    top: 5vh;
+    left: 50%;
+    translate: -50%;
+}
+
+.contacts {
+    border-right: 1px solid var(--boolzapp-border);
+}
+
+input,
+button {
+    border: 1px solid var(--search-borders);
+}
+
+.contacts .search {
+    background-color: #FAFAFA;
+}
+
+.contacts_list {
+    height: calc(90vh - 184px);
+    overflow-y: auto;
+}
+
+.contact {
+    height: 80px;
+    background-color: var(--light);
+    border-top: 1px solid var(--boolzapp-border);
+}
+
+.contact img {
+    width: 60px;
+}
+
+.chat_top,
+.user_contact {
+    height: 70px;
+    background-color: var(--light-boolzapp);
+}
+
+
+
+.chat_user_avatar img,
+.user_contact img {
+    width: 55px;
+}
+
+
+.user_notification {
+    background-color: var(--boolzapp-blue);
+    height: 80px;
+    align-items: center;
+}
+
+.user_notification .bell {
+    background-color: white;
+    height: 55px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.chat_main {
+    height: calc(90vh - 70px);
+    background-image: url(../img/mine.jpg);
+}
+
+.chat_imputs {
+    background-color: var(--input-chat-bg);
+}
+
+.message_wrapper {
+    overflow-y: auto;
+
+}
+
+.message {
+    max-width: 250px;
+    padding: 0.4rem;
+    border-radius: 8px;
+    margin: 0.5rem 0;
+
+}
+
+.message.sent {
+    background-color: var(--msg-received);
+    margin-left: auto;
+}
+
+.message.received {
+    background-color: white;
+    margin-right: auto;
+}
