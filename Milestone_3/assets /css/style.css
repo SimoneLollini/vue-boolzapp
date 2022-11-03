@@ -59,7 +59,7 @@ img.avatar {
 }
 
 .contacts .active {
-    background-color: var(--boolzapp-border);
+    background-color: var(--light-boolzapp);
 }
 
 /* #endregion utility */
