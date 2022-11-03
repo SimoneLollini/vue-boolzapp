@@ -181,6 +181,7 @@ createApp({
             this.activeChat = index
 
         },
+
         answer() {
             console.log('funzione asincrona eseguita');
             this.contacts[this.activeChat].messages.push({
