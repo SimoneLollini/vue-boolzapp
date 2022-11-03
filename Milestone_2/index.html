@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoolzApp 2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets /css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <!-- FontAwesome 6.2.0 CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body class="font position-relative">
+    <header id="site_header"></header>
+    <!-- /#site_header -->
+
+
+    <main id="site_main">
+
+
+        <div id="app" class="container">
+            <div class="row">
+                <div class="col-4 p-0 contacts">
+                    <div class="user_contact d-flex align-items-center justify-content-between px-2">
+                        <div class="user_info d-flex align-items-center">
+                            <img src="./assets /img/avatar_io.jpg" class="avatar" alt="">
+                            <div class="name px-2">Sofia</div>
+                        </div>
+
+
+                        <div class="user_tools tools">
+                            <span class="text_light_grey tool"> <i class="fa-solid fa-ellipsis-vertical"></i></span>
+                            <span class="text_light_grey tool"> <i class="fa-solid fa-message"></i></span>
+                            <span class="text_light_grey tool"><i class="fa-solid fa-circle-notch"></i></span>
+                        </div>
+
+
+                    </div>
+                    <!-- /.user_contact -->
+                    <div class="user_notification d-flex">
+                        <div class="bell mx-2">
+                            <i class="fa-solid fa-bell-slash text_blue"></i>
+                        </div>
+                        <div class="notification_text">
+                            <div class="notification_status">
+                                Ricevi notifiche di nuovi messagi
+                            </div>
+                            <div class="">
+                                <span class="text-decoration-underline tool text_light_grey">Attiva notifiche
+                                    desktop</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.user_notification -->
+
+                    <div class="search d-flex align-items-center justify-content-center p-1">
+                        <button class="flex-grow-1 bg-white"><i class="fa fa-search" aria-hidden="true"></i></button>
+                        <input type="text" class="flex-grow-1">
+                    </div>
+
+
+
+                    <div class="contacts_list bg-white">
+                        <div class="contact d-flex align-items-center px-2" v-for="(contact, index) in contacts"
+                            @click="setActiveChat(index)">
+                            <img :src="'./assets /img/avatar'+contact.avatar+'.jpg'" class="avatar" alt="">
+                            <div class="text_wrapper mx-2">
+                                <div class="user_name">{{contact.name}}</div>
+                                <div class="last_message text_light_grey">Inserire l'ultimo messaggio qui</div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- /.contacts -->
+
+
+                <div class="col-8 p-0 active_chat">
+
+
+                    <div class="chat_top d-flex align-items-center justify-content-between px-2">
+                        <div class="user d-flex">
+                            <div class="chat_user_avatar d-flex">
+                                <img :src="'./assets /img/avatar'+contacts[activeChat].avatar+'.jpg'" class="avatar"
+                                    alt="">
+                            </div>
+                            <!-- /.chat_avatar -->
+                            <div class="text_wrapper">
+                                <div class="name">{{contacts[activeChat].name}}</div>
+
+                                <div class="last_access text_light_grey">Ultimo accesso oggi alle 12:00</div>
+
+                            </div>
+                            <!-- /.text_wrapper -->
+
+                        </div>
+                        <!-- /.user -->
+                        <div class="chat_tools tools">
+                            <span class="tool text_light_grey"><i class="fa fa-search" aria-hidden="true"></i></span>
+                            <span class="tool text_light_grey"><i class="fa-solid fa-ellipsis-vertical"></i></span>
+                            <span class="tool text_light_grey"><i class="fa-solid fa-paperclip"></i></span>
+                        </div>
+                        <!-- /.tools -->
+                    </div>
+                    <!-- /.chat_top -->
+
+                    <div class="chat_main d-flex flex-column justify-content-between">
+                        <div class="message_wrapper px-5 pt-5">
+                            <div class="message" v-for="(contact, indexChat) in contacts">
+                                {{contacts[activeChat].messages[indexChat]}}
+                            </div>
+                        </div>
+
+                        <div class="chat_imputs d-flex text_light_grey py-2 ">
+                            <div class="wrapper_emoticon px-5">
+                                <i class="fa-regular fa-face-smile"></i>
+                            </div>
+                            <input type="text" class="flex-grow-1">
+                            <div class="audio_input px-5"><i class="fa-solid fa-microphone"></i></div>
+                        </div>
+                    </div>
+                    <!-- /.chat_main -->
+
+                </div>
+                <!-- /.active_chat -->
+
+            </div>
+
+
+        </div>
+
+    </main>
+    <!-- /#site_main -->
+
+
+
+    <div class="body_bottom"></div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./assets /js/app.js"></script>
+</body>
+
+</html>
