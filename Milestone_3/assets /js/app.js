@@ -181,11 +181,18 @@ createApp({
             this.activeChat = index
 
         },
+        answer() {
+            console.log('funzione asincrona eseguita');
+            this.contacts[this.activeChat].messages.push({
+
+                date: '10/01/2020 15:51:00',
+                message: 'Ok!!',
+                status: 'received'
+
+            })
+        },
         sendNewMessage() {
-            // dovrò verificare che il messaggio non sia vuoto usero if .length >0
             if (this.newMessage.length > 0) {
-                console.log('hai inviato un nuovo messaggio');
-                console.log(this.newMessage)
                 this.contacts[this.activeChat].messages.push({
 
                     date: '10/01/2020 15:51:00',
@@ -194,6 +201,7 @@ createApp({
 
                 })
                 this.newMessage = ''
+                setTimeout(this.answer, 1000)
             }
 
         }
