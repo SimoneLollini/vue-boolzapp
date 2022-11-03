@@ -58,6 +58,10 @@ img.avatar {
     color: var(--boolzapp-blue);
 }
 
+.contacts .active {
+    background-color: var(--boolzapp-border);
+}
+
 /* #endregion utility */
 
 
@@ -102,6 +106,7 @@ button {
 .contact {
     height: 80px;
     background-color: var(--light);
+    border-top: 1px solid var(--boolzapp-border);
 }
 
 .contact img {
@@ -154,12 +159,14 @@ button {
 }
 
 .message {
-    width: 40%;
+    max-width: 250px;
     padding: 0.4rem;
     border-radius: 8px;
+    margin: 0.5rem 0;
+
 }
 
-.message.send {
+.message.sent {
     background-color: var(--msg-received);
     margin-left: auto;
 }

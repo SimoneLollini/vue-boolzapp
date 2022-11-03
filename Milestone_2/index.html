@@ -70,8 +70,8 @@
 
 
                     <div class="contacts_list bg-white">
-                        <div class="contact d-flex align-items-center px-2" v-for="(contact, index) in contacts"
-                            @click="setActiveChat(index)">
+                        <div class="contact d-flex align-items-center px-2" :class="activeChat===index? 'active' : ''"
+                            v-for="(contact, index) in contacts" @click="setActiveChat(index)">
                             <img :src="'./assets /img/avatar'+contact.avatar+'.jpg'" class="avatar" alt="">
                             <div class="text_wrapper mx-2">
                                 <div class="user_name">{{contact.name}}</div>
@@ -115,8 +115,9 @@
 
                     <div class="chat_main d-flex flex-column justify-content-between">
                         <div class="message_wrapper px-5 pt-5">
-                            <div class="message" v-for="(contact, indexChat) in contacts">
-                                {{contacts[activeChat].messages[indexChat]}}
+                            <div class="message" :class="infoMessage.status==='sent'? 'sent':'received'"
+                                v-for="(infoMessage, index) in contacts[activeChat].messages">
+                                {{infoMessage.message}}
                             </div>
                         </div>
 
