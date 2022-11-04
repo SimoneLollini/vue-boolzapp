@@ -117,9 +117,14 @@
 
                     <div class="chat_main d-flex flex-column justify-content-between">
                         <div class="message_wrapper px-5 pt-5">
-                            <div class="message" :class="infoMessage.status==='sent'? 'sent':'received'"
+                            <div class="message d-flex flex-column justify-content-between"
+                                :class="infoMessage.status==='sent'? 'sent':'received'"
                                 v-for="(infoMessage, index) in contacts[activeChat].messages">
-                                {{infoMessage.message}}
+                                <div class="text">
+                                    {{infoMessage.message}}
+                                </div>
+
+                                <div class="date">{{infoMessage.date.split(' ')[1].slice(0,5)}}</div>
                             </div>
                         </div>
 

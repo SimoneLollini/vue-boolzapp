@@ -99,6 +99,14 @@ button {
     border: 1px solid var(--search-borders);
 }
 
+.date {
+    margin-top: 0.25rem;
+    align-self: flex-end;
+    font-size: 0.6rem;
+    font-weight: 300;
+    height: 10px;
+}
+
 .contacts .search {
     background-color: #FAFAFA;
 }
@@ -169,6 +177,10 @@ button {
     border-radius: 8px;
     margin: 0.5rem 0;
 
+}
+
+.message .text {
+    margin-bottom: -7px;
 }
 
 .message.sent {
