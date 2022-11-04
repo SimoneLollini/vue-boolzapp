@@ -65,10 +65,7 @@
                     <div class="search d-flex align-items-center justify-content-center p-1">
                         <button @click="search" class="flex-grow-1 bg-white"><i class="fa fa-search"
                                 aria-hidden="true"></i></button>
-                        <!-- <button @click="contactList" class="flex-grow-1 bg-white"><i class="fa fa-search"
-                                    aria-hidden="true"></i></button> -->
-                        <input type="text" class="flex-grow-1" v-model="searchFor" @keyup.enter="search">
-                        <!-- <input type="text" class="flex-grow-1" v-model="searchFor" @keyup.enter="contactList"> -->
+                        <input type="text" class="flex-grow-1" v-model="searchFor" @keyup="search">
                     </div>
 
 
@@ -150,7 +147,7 @@
 
 
     <div class="body_bottom"></div>
-    <!-- <script src="https://moment.github.io/luxon/es6/luxon.min.js"></script> -->
+
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./assets /js/app.js"></script>
 </body>
