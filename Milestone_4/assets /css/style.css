@@ -59,6 +59,10 @@ img.avatar {
     color: var(--boolzapp-blue);
 }
 
+.contact {
+    background-color: var(--light);
+}
+
 .contacts .active {
     background-color: var(--light-boolzapp);
 }
@@ -104,9 +108,9 @@ button {
     overflow-y: auto;
 }
 
-.contact {
+
+.contact_card {
     height: 80px;
-    background-color: var(--light);
     border-top: 1px solid var(--boolzapp-border);
 }
 

@@ -208,14 +208,17 @@ createApp({
             }
 
         },
-        contactList() {
-            console.log(this.contacts);
-            return this.contacts
-        },
+        // contactList() {
+        //     console.log(this.contacts);
+        //     return this.contacts
+        // },
         search() {
-            this.contactList
+
             const filter = this.contacts.filter((contact) => contact.name.toUpperCase().includes(this.searchFor.toUpperCase()))
             console.log(filter);
+            console.log(this.contacts[0].visible);
+
+
             // return this.contacts = filter
             // confronta il nome inserito dall utente corrisponde ad un nome inserito nell'array di contatti quindi restituisci un array di contatti che hanno nome e valore inserito dall utente uguale
         },

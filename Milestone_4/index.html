@@ -65,20 +65,24 @@
                     <div class="search d-flex align-items-center justify-content-center p-1">
                         <button @click="search" class="flex-grow-1 bg-white"><i class="fa fa-search"
                                 aria-hidden="true"></i></button>
+                        <!-- <button @click="contactList" class="flex-grow-1 bg-white"><i class="fa fa-search"
+                                    aria-hidden="true"></i></button> -->
                         <input type="text" class="flex-grow-1" v-model="searchFor" @keyup.enter="search">
+                        <!-- <input type="text" class="flex-grow-1" v-model="searchFor" @keyup.enter="contactList"> -->
                     </div>
 
 
 
                     <div class="contacts_list bg-white">
-                        <div class="contact d-flex align-items-center px-2" :class="activeChat===index? 'active' : ''"
-                            v-for="(contact, index) in contactList" @click="setActiveChat(index)">
-                            <img :src="'./assets /img/avatar'+contact.avatar+'.jpg'" class="avatar" alt="">
-                            <div class="text_wrapper mx-2">
-                                <div class="user_name">{{contact.name}}</div>
-                                <div class="last_message text_light_grey">Inserire l'ultimo messaggio qui</div>
+                        <div class="contact " :class="activeChat===index? 'active' : ''"
+                            v-for="(contact, index) in contacts" @click="setActiveChat(index)">
+                            <div class="contact_card d-flex align-items-center px-2" v-if="contacts[index].visible">
+                                <img :src="'./assets /img/avatar'+contact.avatar+'.jpg'" class="avatar" alt="">
+                                <div class="text_wrapper mx-2">
+                                    <div class="user_name">{{contact.name}}</div>
+                                    <div class="last_message text_light_grey">Inserire l'ultimo messaggio qui</div>
+                                </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
