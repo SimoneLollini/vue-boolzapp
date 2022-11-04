@@ -174,6 +174,8 @@ createApp({
 
             ],
             activeChat: 0,
+            searchFor: '',
+
         }
     },
     methods: {
@@ -183,7 +185,7 @@ createApp({
         },
 
         answer() {
-            console.log('funzione asincrona eseguita');
+            // console.log('funzione asincrona eseguita');
             this.contacts[this.activeChat].messages.push({
 
                 date: '10/01/2020 15:51:00',
@@ -205,15 +207,18 @@ createApp({
                 setTimeout(this.answer, 1000)
             }
 
-        }
+        },
+        contactList() {
+            console.log(this.contacts);
+            return this.contacts
+        },
+        search() {
+            this.contactList
+            const filter = this.contacts.filter((contact) => contact.name.toUpperCase().includes(this.searchFor.toUpperCase()))
+            console.log(filter);
+            // return this.contacts = filter
+            // confronta il nome inserito dall utente corrisponde ad un nome inserito nell'array di contatti quindi restituisci un array di contatti che hanno nome e valore inserito dall utente uguale
+        },
     }
 }).mount('#app')
 
-
-// ● Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e digitando
-// “enter” il testo viene aggiunto al thread sopra, come messaggio verde
-
-
-
-// ● Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente riceverà
-// un “ok” come risposta, che apparirà dopo 1 secondo.
