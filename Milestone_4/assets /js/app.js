@@ -174,7 +174,7 @@ createApp({
 
             ],
             activeChat: 0,
-            searchFor: '',
+            searchFor: 'Fabio',
 
         }
     },
@@ -208,19 +208,22 @@ createApp({
             }
 
         },
-        // contactList() {
-        //     console.log(this.contacts);
-        //     return this.contacts
-        // },
         search() {
+            // console.log(this.searchFor.toUpperCase() + " <----- questo è l'imput dell utente");
+            // const filter = this.contacts.filter((contact) => contact.name.toUpperCase().includes(this.searchFor.toUpperCase()))
+            // console.log(filter);
+            // partendo da questa nuova array di oggetti se un oggetto appartiene all' array imposto visibile su true altrimenti metto false
+            this.contacts.forEach((contact, i) => {
+                console.log(contact.name.toUpperCase());
+                if (contact.name.toUpperCase().includes(this.searchFor.toUpperCase())) {
+                    console.log('sei in if');
+                    this.contacts[i].visible = true
+                } else {
+                    console.log('sei in else');
+                    this.contacts[i].visible = false
+                }
 
-            const filter = this.contacts.filter((contact) => contact.name.toUpperCase().includes(this.searchFor.toUpperCase()))
-            console.log(filter);
-            console.log(this.contacts[0].visible);
-
-
-            // return this.contacts = filter
-            // confronta il nome inserito dall utente corrisponde ad un nome inserito nell'array di contatti quindi restituisci un array di contatti che hanno nome e valore inserito dall utente uguale
+            });
         },
     }
 }).mount('#app')
