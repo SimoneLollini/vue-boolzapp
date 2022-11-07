@@ -1,6 +1,6 @@
 
 
-const dateMessage = (new Date().getMonth()) + '/' + (new Date().getDate()) + '/' + (new Date().getFullYear()) + ' ' + new Date().getHours() + ':' + new Date().getMinutes() + ':' + new Date().getSeconds();
+const dateMessage = (new Date().getMonth() + 1) + '/' + (new Date().getDate()) + '/' + (new Date().getFullYear()) + ' ' + new Date().getHours() + ':' + new Date().getMinutes() + ':' + new Date().getSeconds();
 
 
 const { createApp } = Vue
