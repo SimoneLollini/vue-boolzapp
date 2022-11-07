@@ -77,7 +77,8 @@
                                 <img :src="'./assets /img/avatar'+contact.avatar+'.jpg'" class="avatar" alt="">
                                 <div class="text_wrapper mx-2">
                                     <div class="user_name">{{contact.name}}</div>
-                                    <div class="last_message text_light_grey">Inserire l'ultimo messaggio qui</div>
+                                    <div class="last_message text_light_grey">
+                                        {{contacts[index].messages[contacts[index].messages.length-1].message}}</div>
                                 </div>
                             </div>
                         </div>
