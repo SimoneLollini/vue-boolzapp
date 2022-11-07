@@ -1,5 +1,6 @@
 
 
+const dateMessage = (new Date().getMonth()) + '/' + (new Date().getDate()) + '/' + (new Date().getFullYear()) + ' ' + new Date().getHours() + ':' + new Date().getMinutes() + ':' + new Date().getSeconds();
 
 
 const { createApp } = Vue
@@ -188,7 +189,7 @@ createApp({
             // console.log('funzione asincrona eseguita');
             this.contacts[this.activeChat].messages.push({
 
-                date: '10/01/2020 15:51:00',
+                date: dateMessage,
                 message: 'Ok!!',
                 status: 'received'
 
@@ -198,7 +199,8 @@ createApp({
             if (this.newMessage.length > 0) {
                 this.contacts[this.activeChat].messages.push({
 
-                    date: '10/01/2020 15:51:00',
+                    date: dateMessage,
+
                     message: this.newMessage,
                     status: 'sent'
 
